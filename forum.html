@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+my first forum</title>
+<script type="text/javascript">
+
+
+function validate1(){ 
+var fname = document.getElementById("field_1").value;
+        var rel = /^[a-zA-Z\s\'\-]{2,15}$/;
+        if (rel.test(fname)) {
+          document.getElementById("name_field1").style.color = "green";
+          document.getElementById("name_field1").innerHTML = "Hi  "+ fname +"!!";
+        } else {
+          document.getElementById("name_field1").style.color = "Red";
+          document.getElementById("name_field1").innerHTML =
+            "Please enter 2-15 characters";
+
+        }
+}
+function validate2(){ 
+var fname = document.getElementById("field_2").value;
+        var rel = /^[a-zA-Z\s\'\-]{2,15}$/;
+        if (rel.test(fname)) {
+          document.getElementById("name_field2").style.color = "green";
+          document.getElementById("name_field2").innerHTML = " nice name ";
+        }
+ else {
+          document.getElementById("name_field2").style.color = "Red";
+          document.getElementById("name_field2").innerHTML =
+            "Please enter 2-15 characters";
+
+        }
+}
+function mark() {
+var first=document.getElementById("field_1").value; 
+var last=document.getElementById("field_2").value;
+var name=first+" " +last;
+ 
+        document.getElementById("MARK").style.fontSize = "30px";
+        document.getElementById("MARK").style.color = "Red";
+        document.getElementById("MARK").innerHTML =
+           "Hi " + name + "!! "+
+          "<b>nice to meet you!!</b>";
+      }
+
+</script>
+</head>
+<body style="background-color:linen;">
+<h1 style="color:red;background-color:yellow;text-align:center;border-radius:30px;border-color:red;border-size:20px;"> "let me know you" </h1>
+
+<form style="font-size:20px;color:red;">
+<str>
+ First Name:
+<input type="text" placeholder=" First Name" name="Get_name" id="field_1" onblur="validate1()" />
+<span id="name_field1" >&nbsp</span>
+<br>
+<br>
+Last Name:
+<input type="text" placeholder="Last Name" name="Get_name" id="field_2" onblur="validate2()" />
+<span id="name_field2" >&nbsp</span>
+<br>
+<br>
+<br>
+hobbies:<br>
+<br>
+<input type="radio" name="hobbies" value="listening songs">
+
+<label for="listening songs">listening songs</label><br>
+<input type="radio" name="hobbies" value="playing games">
+<label for="playing games">playing games</label><br>
+<input type="radio" name="hobbies" value="travelling">
+<label for="travelling">travelling</label><br>
+<br>
+<br>
+skills:
+<br>
+<br>
+<input type="checkbox" name="skills" value="C/C++">
+<label for="C/C++">C/C++</label><br>
+<input type="checkbox" name="skills" value="Java">
+<label for="Java">Java</label><br>
+<input type="checkbox" name="skills" value="python">
+<label for="python">python</label><br>
+<input type="checkbox" name="skills" value="Html">
+<label for="Html">Html</label><br>
+<input type="checkbox" name="skills" value="Java script">
+<label for="Java script">Java script</label><br>
+<input type="checkbox" name="skills" value="C.S.S">
+<label for="C.S.S">C.S.S</label><br>
+<br>
+<br>
+Birthday:
+<input type="number" placeholder="DD/MM/YYYY"   name="birthday" /><br>
+<br>
+<br>
+status:
+<br>
+<input type="radio" name="hobbies" value="single">
+
+<label for="single">single</label><br>
+<input type="radio" name="hobbies" value="couple">
+<label for="couple">couple</label><br>
+<br>
+my age:
+<input type="range" id="a" name="a" value="50">
+=
+phone:
+<input type="number">
+<output name="x" for="a"></output>
+      <input type="button" value="Send Data" onclick="mark()" colspan="3"/><br /> <p id="MARK"></p>
+<button id="button" colspan="3" ><span class="buttonbg" onclick="mark()" ></span></button>
+
+</form> 
+
+
+
+</body>
+</html>
+
+
